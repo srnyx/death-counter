@@ -29,7 +29,7 @@ public abstract class ClientPlayNetworkHandlerMixin {
         var config = ClientConfigManager.INSTANCE.read();
 
         if (!config.getChatMessage().getDisable()) {
-            client.player.sendMessage(message);
+            client.player.sendMessage(message, false);
         }
 
         if (!config.getTitleMessage().getDisable()) {
