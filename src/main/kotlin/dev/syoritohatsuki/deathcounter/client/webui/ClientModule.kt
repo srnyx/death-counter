@@ -14,14 +14,15 @@ fun Application.clientModule(client: MinecraftClient) {
     (environment as ApplicationEngineEnvironment).connectors.also { con ->
 
         environment.monitor.subscribe(ApplicationStarted) {
-            if (!ClientConfigManager.read().showToastNotification.disable) WebToast.show(
-                client.toastManager, con[0].host, con[0].port
-            )
+            if (!ClientConfigManager.read().showToastNotification.disable)
+                client.toastManager.add(WebToast(con[0].host, con[0].port))
         }
 
         routing {
             get {
-                call.respondHtml { htmlTemplate(con[0].host, con[0].port) }
+                call.respondHtml {
+                    htmlTemplate(con[0].host, con[0].port)
+                }
             }
 
             get("deaths") {
