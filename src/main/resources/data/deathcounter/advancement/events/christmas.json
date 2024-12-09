@@ -1,0 +1,21 @@
+{
+  "parent": "deathcounter:events/root",
+  "criteria": {
+    "custom_trigger": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "frame": "challenge",
+    "description": {
+      "text": "Your holiday spirit lives on..."
+    },
+    "icon": {
+      "id": "minecraft:sweet_berries"
+    },
+    "title": {
+      "text": "Last Gift Under the Tree"
+    },
+    "hidden": true
+  }
+}

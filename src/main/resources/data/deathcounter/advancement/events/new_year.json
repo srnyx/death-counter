@@ -1,0 +1,21 @@
+{
+  "parent": "deathcounter:events/root",
+  "criteria": {
+    "custom_trigger": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "frame": "challenge",
+    "description": {
+      "text": "End the year with a bang!"
+    },
+    "icon": {
+      "id": "minecraft:firework_rocket"
+    },
+    "title": {
+      "text": "Final Countdown"
+    },
+    "hidden": true
+  }
+}
